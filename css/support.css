@@ -1,0 +1,752 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/*======================================================================
+# mixin
+======================================================================*/
+/*======================================================================
+# color
+======================================================================*/
+/*======================================================================
+# font
+======================================================================*/
+/*======================================================================
+# common
+======================================================================*/
+@media screen and (min-width: 1025px) {
+  .is-sp {
+    display: none;
+  }
+  .is-tab {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .is-tab {
+    display: block;
+  }
+  .is-pc {
+    display: none;
+  }
+  .is-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .is-pc {
+    display: none;
+  }
+  .is-tab {
+    display: none;
+  }
+  .is-sp {
+    display: block;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 599px) {
+  html.is-fixed,
+  html.is-fixed body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+body {
+  color: #231815;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: .01em;
+  font-weight: 500;
+}
+
+.inner {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* fv
+----------------------------------------------------------------------*/
+.fv {
+  padding-bottom: 35px;
+}
+
+.fv .head {
+  text-align: center;
+  margin-top: 65px;
+}
+
+@media screen and (max-width: 599px) {
+  .fv .head {
+    margin-top: 35px;
+  }
+}
+
+.fv .lead {
+  max-width: 580px;
+  position: relative;
+  display: inline-block;
+  font-size: 4.5rem;
+  padding-bottom: 10px;
+  color: #E83A37;
+  border-bottom: 3px dotted #E83A37;
+}
+
+.fv .lead::before {
+  content: 'まじめし\A店舗を\A利用して';
+  position: absolute;
+  text-align: center;
+  white-space: pre;
+  bottom: -20px;
+  padding: 3.5% 2%;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  left: 0;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  color: #fff;
+  width: 130px;
+  height: 130px;
+  background: url(../img/support/balloon.png) no-repeat center center/contain;
+}
+
+@media screen and (max-width: 768px) {
+  .fv .lead {
+    font-size: 3.4rem;
+  }
+  .fv .lead::before {
+    width: 100px;
+    height: 100px;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .fv .lead {
+    font-size: 2.0rem;
+    margin-left: 20px;
+  }
+  .fv .lead::before {
+    width: 60px;
+    height: 60px;
+    font-size: 1.1rem;
+  }
+}
+
+.fv .box {
+  max-width: 700px;
+  margin: 35px auto;
+  width: 90%;
+}
+
+.fv .canpain-btn {
+  display: block;
+  width: 380px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  background: #E83A37;
+  border-radius: 30px;
+  font-size: 2.0rem;
+  padding-left: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fv .canpain-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%) rotate(270deg);
+          transform: translateY(-50%) rotate(270deg);
+  width: 20px;
+  height: 20px;
+  background: url(../img/common/arrow.svg) no-repeat center center/cover;
+}
+
+@media screen and (max-width: 599px) {
+  .fv .canpain-btn {
+    width: 260PX;
+    height: 50PX;
+    line-height: 50px;
+    font-size: 1.6rem;
+  }
+}
+
+/* canpain-top
+----------------------------------------------------------------------*/
+.canpain-top .canpain-period {
+  background-color: #f6ab00;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+}
+
+.canpain-top .canpain-period .inner .period {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+}
+
+.canpain-top .canpain-period .inner .period strong {
+  font-size: 4.2rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .canpain-top .canpain-period .inner .period {
+    font-size: 2.0rem;
+  }
+  .canpain-top .canpain-period .inner .period strong {
+    font-size: 3.0rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-period .inner .period {
+    font-size: 1.8rem;
+  }
+  .canpain-top .canpain-period .inner .period strong {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-period .inner .period {
+    padding-top: 10px;
+    line-height: 1.4;
+    font-size: 1.4rem;
+  }
+  .canpain-top .canpain-period .inner .period strong {
+    font-size: 1.8rem;
+  }
+}
+
+.canpain-top .canpain-method {
+  background-color: #E83A37;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  padding: 50px 0 75px;
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-method {
+    padding: 30px 0 40px;
+  }
+}
+
+.canpain-top .canpain-method .lead {
+  font-size: 2.0rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.canpain-top .canpain-method .lead small {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-method .lead {
+    font-size: 1.6rem;
+  }
+  .canpain-top .canpain-method .lead small {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-method .lead {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .canpain-top .canpain-method .lead small {
+    font-size: 1.0rem;
+  }
+}
+
+.canpain-top .canpain-method .box.is-pc {
+  margin-top: 45px;
+}
+
+.canpain-top .canpain-method .box.is-tab {
+  margin-top: 45px;
+}
+
+.canpain-top .canpain-method .box.is-sp {
+  background: #fff;
+  border-radius: 15px;
+  padding-top: 1px;
+  margin-top: 20px;
+}
+
+.canpain-top .canpain-method .box.is-sp .box {
+  width: 90%;
+  margin: 20px auto 0;
+  padding-bottom: 20px;
+  border-bottom: 3px dotted #E83A37;
+  position: relative;
+}
+
+.canpain-top .canpain-method .box.is-sp .box::after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(90deg);
+          transform: translateX(-50%) rotate(90deg);
+  background: url(../img/support/arrow_2.png) no-repeat center center/contain;
+}
+
+.canpain-top .canpain-method .box.is-sp .box p {
+  font-size: 1.3rem;
+  color: #E83A37;
+  font-weight: 700;
+  width: 60%;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.canpain-top .canpain-method .box.is-sp .box .img-wrap {
+  width: 40%;
+  text-align: center;
+}
+
+.canpain-top .canpain-method .box.is-sp .box img {
+  width: 100%;
+}
+
+.canpain-top .canpain-method .box.is-sp .box:nth-child(3) p {
+  margin-top: 5px;
+}
+
+.canpain-top .canpain-method .box.is-sp .box:last-child {
+  border-bottom: none;
+  text-align: center;
+}
+
+.canpain-top .canpain-method .box.is-sp .box:last-child p {
+  width: 100%;
+}
+
+.canpain-top .canpain-method .box.is-sp .box:last-child::after {
+  width: 0;
+}
+
+.canpain-top .canpain-prize {
+  background-color: #f6ab00;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+  padding: 70px 0;
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize {
+    padding: 35px 0;
+  }
+}
+
+.canpain-top .canpain-prize .head {
+  text-align: center;
+}
+
+.canpain-top .canpain-prize h3 {
+  color: #fff;
+  font-size: 3.0rem;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.4;
+  position: relative;
+}
+
+.canpain-top .canpain-prize h3::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 45px;
+  height: 108px;
+  background: url(../img/support/decoration.svg) no-repeat center center/contain;
+}
+
+.canpain-top .canpain-prize h3::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -80px;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  width: 45px;
+  height: 108px;
+  background: url(../img/support/decoration.svg) no-repeat center center/contain;
+}
+
+.canpain-top .canpain-prize h3 small {
+  font-size: 2.5rem;
+}
+
+.canpain-top .canpain-prize h3 strong {
+  font-size: 5.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize h3 {
+    font-size: 2.0rem;
+  }
+  .canpain-top .canpain-prize h3 small {
+    font-size: 1.6rem;
+  }
+  .canpain-top .canpain-prize h3 strong {
+    font-size: 4.0rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize h3 {
+    font-size: 1.8rem;
+  }
+  .canpain-top .canpain-prize h3::before {
+    bottom: -40px;
+    left: -25px;
+    width: 20px;
+    height: 60px;
+  }
+  .canpain-top .canpain-prize h3::after {
+    bottom: -40px;
+    right: -25px;
+    width: 20px;
+    height: 60px;
+  }
+  .canpain-top .canpain-prize h3 small {
+    font-size: 1.4rem;
+  }
+  .canpain-top .canpain-prize h3 strong {
+    font-size: 2.1rem;
+  }
+}
+
+.canpain-top .canpain-prize .flex {
+  margin-top: -10px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../img/support/prize-bg.png) no-repeat center center/contain;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .flex {
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex {
+    height: 120px;
+    margin-top: 20px;
+  }
+}
+
+.canpain-top .canpain-prize .flex .l-box {
+  margin-top: 32px;
+  border-radius: 15px 0 0 15px;
+  width: 17%;
+}
+
+.canpain-top .canpain-prize .flex .l-box p {
+  text-align: center;
+  line-height: 280px;
+  font-size: 2.8rem;
+}
+
+.canpain-top .canpain-prize .flex .l-box p span {
+  font-size: 4.0rem;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .flex .l-box p {
+    font-size: 2.0rem;
+  }
+  .canpain-top .canpain-prize .flex .l-box p span {
+    font-size: 3.0rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex .l-box p {
+    font-size: 1.4rem;
+    line-height: 0;
+  }
+  .canpain-top .canpain-prize .flex .l-box p span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex .l-box {
+    margin-top: 10px;
+  }
+}
+
+.canpain-top .canpain-prize .flex .m-box {
+  width: 43%;
+  margin-top: 32px;
+  padding-left: 2%;
+}
+
+.canpain-top .canpain-prize .flex .m-box p {
+  line-height: 1.15385;
+  font-size: 2.8rem;
+  margin: auto 0;
+}
+
+.canpain-top .canpain-prize .flex .m-box p span {
+  font-size: 4.0rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .canpain-top .canpain-prize .flex .m-box p {
+    font-size: 2.4rem;
+  }
+  .canpain-top .canpain-prize .flex .m-box p span {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .flex .m-box p {
+    font-size: 2.0rem;
+  }
+  .canpain-top .canpain-prize .flex .m-box p span {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex .m-box p {
+    font-size: 1.0rem;
+  }
+  .canpain-top .canpain-prize .flex .m-box p span {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex .m-box {
+    margin-top: 10px;
+  }
+}
+
+.canpain-top .canpain-prize .flex .r-box {
+  width: 40%;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.canpain-top .canpain-prize .flex .r-box img {
+  max-width: 260px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex .r-box {
+    margin-top: 10px;
+  }
+}
+
+.canpain-top .canpain-prize .flex.row02 {
+  margin-top: -25px;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .flex.row02 {
+    margin-top: -65px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex.row02 {
+    margin-top: 0;
+  }
+}
+
+.canpain-top .canpain-prize .flex.row02 .r-box img {
+  max-width: 350px;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .canpain-top .canpain-prize .flex.row02 .r-box img {
+    max-width: 290px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .flex.row02 .r-box img {
+    max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .flex.row02 .r-box img {
+    max-width: 100px;
+  }
+}
+
+.canpain-top .canpain-prize .attention {
+  width: 93%;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.90909;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .attention {
+    margin-top: -45px;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .attention {
+    margin-top: 0;
+    line-height: 1.3;
+    font-size: 1.0rem;
+  }
+}
+
+.canpain-top .canpain-prize .txt-wrap {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .txt-wrap {
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .txt-wrap {
+    margin-top: 0;
+  }
+}
+
+.canpain-top .canpain-prize .txt {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .canpain-top .canpain-prize .txt {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .canpain-top .canpain-prize .txt {
+    line-height: 1.3;
+    font-size: 1.0rem;
+  }
+}
+
+/* contact
+----------------------------------------------------------------------*/
+.contact {
+  padding-top: 50px;
+  background: #fff;
+}
+
+.contact .txt {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .contact .txt {
+    font-size: 1.2rem;
+  }
+}
+
+.contact .box {
+  margin: 40px auto 0;
+  max-width: 450px;
+  text-align: center;
+  width: 42%;
+  padding: 2%;
+  border: 1px solid #E83A37;
+}
+
+.contact .box .txt {
+  font-size: 2.3rem;
+}
+
+.contact .box .txt span {
+  font-size: 2.0rem;
+}
+
+.contact .box .tel {
+  font-size: 3.5rem;
+  margin-top: 10px;
+}
+
+.contact .box .time {
+  font-size: 2.0rem;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact .box {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .contact .box {
+    width: 90%;
+  }
+  .contact .box .txt {
+    font-size: 1.8rem;
+  }
+  .contact .box .txt span {
+    font-size: 1.6rem;
+  }
+  .contact .box .tel {
+    font-size: 2.6rem;
+  }
+  .contact .box .time {
+    font-size: 1.6rem;
+  }
+}

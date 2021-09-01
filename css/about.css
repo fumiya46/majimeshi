@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/*======================================================================
+# mixin
+======================================================================*/
+/*======================================================================
+# color
+======================================================================*/
+/*======================================================================
+# font
+======================================================================*/
+/*======================================================================
+# common
+======================================================================*/
+@media screen and (min-width: 1025px) {
+  .is-sp {
+    display: none;
+  }
+  .is-tab {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .is-tab {
+    display: block;
+  }
+  .is-pc {
+    display: none;
+  }
+  .is-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .is-pc {
+    display: none;
+  }
+  .is-tab {
+    display: none;
+  }
+  .is-sp {
+    display: block;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 599px) {
+  html.is-fixed,
+  html.is-fixed body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+body {
+  color: #231815;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: .01em;
+  font-weight: 500;
+}
+
+.main {
+  margin-top: 70px;
+}
+
+.inner {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* content
+----------------------------------------------------------------------*/
+.content {
+  background: url(../img/about/aoud-bg.jpg) no-repeat center center/cover;
+  padding: 95px 0;
+  max-width: 1080px;
+  margin: 35px auto 0;
+}
+
+@media screen and (max-width: 599px) {
+  .content {
+    padding: 35px 0;
+  }
+}
+
+.content .inner {
+  border: 2px solid #E83A37;
+  max-width: 880px;
+  text-align: center;
+  background: #fff;
+}
+
+.content h2 {
+  width: 58%;
+  margin: 115px auto 0;
+}
+
+@media screen and (max-width: 599px) {
+  .content h2 {
+    margin: 50px auto 0;
+  }
+}
+
+.content .txt-wrap {
+  max-width: 480px;
+  width: 90%;
+  margin: 85px auto 0;
+}
+
+@media screen and (max-width: 599px) {
+  .content .txt-wrap {
+    margin: 40px auto 0;
+  }
+}
+
+.content p {
+  padding: 20px 0;
+  font-size: 2.4rem;
+  border-bottom: 1px dashed #E83A37;
+}
+
+@media screen and (max-width: 599px) {
+  .content p {
+    font-size: 1.6rem;
+    padding: 15px 0;
+  }
+}
+
+.content p:first-child {
+  border-top: 1px dashed #E83A37;
+}
+
+.content h3 {
+  margin-top: 65px;
+  font-size: 4.0rem;
+  line-height: 2;
+}
+
+@media screen and (max-width: 599px) {
+  .content h3 {
+    font-size: 2.6rem;
+    line-height: 1.7;
+    margin-top: 30px;
+  }
+}
+
+.content h3 span {
+  font-weight: 700;
+  color: #E83A37;
+}
+
+.content .flex {
+  max-width: 660px;
+  width: 90%;
+  margin: 60px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .flex .box {
+  width: 33%;
+  padding: 1%;
+  border: 1px solid #E83A37;
+}
+
+.content .flex .box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .box.bottom {
+  margin: 80px auto 0;
+  max-width: 780px;
+  width: 90%;
+}
+
+@media screen and (max-width: 599px) {
+  .content .box.bottom {
+    margin: 40px auto 0;
+  }
+}
